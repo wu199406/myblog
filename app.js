@@ -26,6 +26,7 @@ app.use('/', routes);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
+//当执行到此处时，表明请求不匹配所有的路由，所以主动抛出异常
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
